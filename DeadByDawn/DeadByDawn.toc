@@ -1,0 +1,17 @@
+## Interface: 16001
+## Title: |cffe6c35cDead by Dawn|r
+## Notes: Guild management for Evil Dead. Guild calendar, quest help board with auto-invites, rank permissions and addon version tracking. Docks to your guild window.
+## Author: Ares
+## Version: 1.0.0
+## X-Stage: prototype
+## SavedVariables: DeadByDawnDB
+
+Config.lua
+Style.lua
+Version.lua
+Core.lua
+Ranks.lua
+Events.lua
+QuestHelp.lua
+UI.lua
+GuildFrame.lua

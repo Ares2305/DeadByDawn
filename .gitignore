@@ -1,0 +1,6 @@
+*.zip
+art/
+__pycache__/
+*.log
+*.bak
+DeadByDawn/Debug.lua
