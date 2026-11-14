@@ -1,6 +1,6 @@
 local ADDON, ns = ...
 
-ns.GUILD = "Evil Dead"
+ns.GUILD = "Evil Dead Forever"
 
 ns.DEV = false
 

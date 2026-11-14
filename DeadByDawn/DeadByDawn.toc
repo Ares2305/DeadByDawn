@@ -1,8 +1,8 @@
 ## Interface: 16001
 ## Title: |cffe6c35cDead by Dawn|r
-## Notes: Guild management for Evil Dead. Guild calendar, quest help board with auto-invites, rank permissions and addon version tracking. Docks to your guild window.
+## Notes: Guild management for Evil Dead Forever. Guild calendar, quest help board with auto-invites, rank permissions and addon version tracking. Docks to your guild window.
 ## Author: Ares
-## Version: 1.0.0
+## Version: 1.0.1
 ## X-Stage: prototype
 ## SavedVariables: DeadByDawnDB
 
