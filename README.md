@@ -1,6 +1,6 @@
 # Dead by Dawn
 
-A guild addon for World of Warcraft Classic, built for **Evil Dead Forever**.
+A guild addon for World of Warcraft: Forever, built for the guild **Evil Dead Forever**.
 
 It lives on your guild window rather than behind a slash command. Open the guild
 or communities panel and there is a *Dead by Dawn* button; the addon slides out
@@ -34,13 +34,13 @@ goes dormant anywhere else, saying so once at login.
 
 ## Installing
 
-Drop the `DeadByDawn` folder into `World of Warcraft\_classic_era_\Interface\AddOns\`
+Drop the `DeadByDawn` folder into `World of Warcraft\_forever_\Interface\AddOns\`
 and restart the client. No dependencies, no slash commands, nothing to configure
 to get started.
 
 ## Status
 
-**1.0.1 prototype.** Requires interface 16001 (Classic Era).
+**1.0.1 prototype.** Requires interface 16001 (Forever, game version 1.60.1).
 
 The version that travels over the guild channel is always the plain number —
 `Version.lua` stamps every Quest Help message with it and parses it back out, so
