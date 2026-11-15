@@ -34,9 +34,29 @@ goes dormant anywhere else, saying so once at login.
 
 ## Installing
 
-Drop the `DeadByDawn` folder into `World of Warcraft\_forever_\Interface\AddOns\`
-and restart the client. No dependencies, no slash commands, nothing to configure
-to get started.
+Never downloaded from GitHub before? It is five steps and nothing can go wrong.
+
+1. Click the green **Code** button near the top of this page, then **Download ZIP**
+   in the dropdown that opens.
+2. Open your Downloads folder. Right-click `DeadByDawn-main.zip` and choose
+   **Extract All**, then **Extract**.
+3. Open the folder that appears, `DeadByDawn-main`. Inside it is a folder called
+   **`DeadByDawn`** — that one is the addon.
+4. Copy that `DeadByDawn` folder into
+   `World of Warcraft\_forever_\Interface\AddOns\`.
+5. Close World of Warcraft completely and start it again. At the character
+   screen, click **AddOns** and make sure **Dead by Dawn** is ticked.
+
+You have it right when the file
+`Interface\AddOns\DeadByDawn\DeadByDawn.toc` exists. If you instead see
+`AddOns\DeadByDawn-main\` or `AddOns\DeadByDawn\DeadByDawn\`, you copied the
+wrapper folder — go one level in and copy the `DeadByDawn` folder itself.
+
+To update later, delete the old `DeadByDawn` folder and repeat. Your settings
+live outside the folder and survive.
+
+No dependencies, no slash commands, nothing to configure. Open your guild window
+and click the **Dead by Dawn** button down the side.
 
 ## Status
 
