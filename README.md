@@ -40,7 +40,7 @@ to get started.
 
 ## Status
 
-**1.0.1 prototype.** Requires interface 16001 (Forever, game version 1.60.1).
+**1.0.2 prototype.** Requires interface 16001 (Forever, game version 1.60.1).
 
 The version that travels over the guild channel is always the plain number —
 `Version.lua` stamps every Quest Help message with it and parses it back out, so

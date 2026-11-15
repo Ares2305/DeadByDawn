@@ -89,30 +89,23 @@ local function OnRosterReady()
 	if ns.UI and ns.UI.Refresh then ns.UI.Refresh() end
 end
 
-local announced = false
+local announcedFor = false
 
 local function Announce()
-	if announced then return end
 	local state = ns.IsOurGuild()
 	if state == nil then return end
-	announced = true
-	if not state then
-		local name = ns.GuildName()
-		ns.Print("dormant - this is for %s, you are in %s.",
-			ns.GUILD or "a specific guild", name or "no guild")
+	local name = ns.GuildName()
+	if announcedFor == name then return end
+	announcedFor = name
+	if state then
+		ns.Ranks:Scan()
+		if ns.DEV then
+			ns.Print("|cffff8000TEST MODE|r - any guild, all permissions. Turn off ns.DEV in Config.lua before release.")
+		end
 		return
 	end
-	ns.Ranks:Scan()
-	local mine = ns.Ranks:MyIndex()
-	ns.Print("%s ready. %d rank(s) detected. You are %s%s%s.",
-		ns.VersionLabel(),
-		ns.Ranks:Count(),
-		GOLD, ns.Ranks:NameOf(mine) or "unranked", R)
-	if ns.DEV then
-		ns.Print("|cffff8000TEST MODE|r - any guild, all permissions. Turn off ns.DEV in Config.lua before release.")
-	elseif ns.Ranks:AmGuildMaster() then
-		ns.Print("you are the guild master - you control what each rank may do.")
-	end
+	ns.Print("dormant - this is for %s, you are in %s.",
+		ns.GUILD or "a specific guild", name or "no guild")
 end
 
 local f = CreateFrame("Frame")
@@ -163,7 +156,6 @@ f:SetScript("OnEvent", function(_, event)
 		end
 
 	elseif event == "PLAYER_GUILD_UPDATE" then
-		announced = false
 		RequestRoster()
 		Announce()
 
