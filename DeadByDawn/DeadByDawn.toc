@@ -2,7 +2,7 @@
 ## Title: |cffe6c35cDead by Dawn|r
 ## Notes: Guild management for Evil Dead Forever. Guild calendar, quest help board with auto-invites, rank permissions and addon version tracking. Docks to your guild window.
 ## Author: Ares
-## Version: 1.0.2
+## Version: 1.0.3
 ## X-Stage: prototype
 ## SavedVariables: DeadByDawnDB
 

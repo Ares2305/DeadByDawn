@@ -108,6 +108,20 @@ local function Announce()
 		ns.GUILD or "a specific guild", name or "no guild")
 end
 
+local greeted = false
+
+local function Greet()
+	if greeted then return end
+	if ns.IsOurGuild() ~= true then return end
+	greeted = true
+	ns.Ranks:Scan()
+	local mine = ns.Ranks:MyIndex()
+	ns.Print("%s ready. %d rank(s) detected. You are %s%s%s.",
+		ns.VersionLabel(),
+		ns.Ranks:Count(),
+		GOLD, ns.Ranks:NameOf(mine) or "unranked", R)
+end
+
 local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_LOGIN")
 f:RegisterEvent("PLAYER_GUILD_UPDATE")
@@ -151,8 +165,8 @@ f:SetScript("OnEvent", function(_, event)
 		if SetGuildRosterShowOffline then pcall(SetGuildRosterShowOffline, true) end
 		RequestRoster()
 		if C_Timer and C_Timer.After then
-			C_Timer.After(3, function() RequestRoster() ; Announce() end)
-			C_Timer.After(10, Announce)
+			C_Timer.After(3, function() RequestRoster() ; Announce() ; Greet() end)
+			C_Timer.After(10, function() Announce() ; Greet() end)
 		end
 
 	elseif event == "PLAYER_GUILD_UPDATE" then
